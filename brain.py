@@ -1,11 +1,15 @@
 #!/usr/bin/python
 
-import spidev
+import serial
+import time
 
-# Open SPI bus
-spi = spidev.SpiDev()
-spi.open(0,0)
-spi.max_speed_hz = 1000000
-
-
+ser = serial.Serial('/dev/ttyACM0', 9600)
+while (True):
+    ser.write('1')
+    time.sleep(1)
+    ser.write('0')
+    time.sleep(1)
+    print(1)
+    print(ser.readline())
+    print(0)
 
