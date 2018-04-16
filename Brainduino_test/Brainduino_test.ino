@@ -1,17 +1,21 @@
 int LEDpin, rx, tx;
+char s[1];
 
 void setup() {
   // put your setup code here, to run once:
+  Serial.begin(9600);
   LEDpin = 8;
-  rx = 0;
-  tx = 1; 
+  pinMode(LEDpin, OUTPUT);
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
-  if (digitalRead(rx) == HIGH) {
-    digitalWrite(LEDpin, HIGH);
-  } else {
+  Serial.readBytesUntil('\n', s, 1);
+  
+  if (s[0] == '1') {
     digitalWrite(LEDpin, LOW);
+  } else {
+    digitalWrite(LEDpin, HIGH);
   }
+  Serial.println("Hello world!");
 }
