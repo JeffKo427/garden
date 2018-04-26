@@ -11,6 +11,7 @@ https://piazza.com/class/jc1xif6fbrs76x?cid=11
   * Should explain the entire design in enough detail that an engineer/programmer could build it from scratch.
 * All: Clean up code and push to GitHub. Add comments!
 * Manny and Maciek: Send Jessica list of materials used in your final design (sensors, special components, etc.)
+* Manny and Maciek: Send Jessica updated Fritzing schematics.
 
 ## Tomorrow
 * Manny and Maciek: Send Jessica clarifications and rewrites as requested.
